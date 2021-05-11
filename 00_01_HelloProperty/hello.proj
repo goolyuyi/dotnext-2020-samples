@@ -1,10 +1,11 @@
 <Project>
 
-  <PropertyGroup>
-    <Greeting Condition="'$(Person)' != ''">Hello $(Person)!</Greeting>
-  </PropertyGroup>
-
-  <Target Name="Greet" Condition="'$(Greet)' != 'false' and '$(Person)' != ''">
-    <Message Text="$(Greeting)" Importance="high" />
-  </Target>
+    <PropertyGroup>
+        <!--展开 Property 用$()-->
+        <Greeting Condition="'$(Person)' != ''">Hello $(Person)!</Greeting>
+    </PropertyGroup>
+    <!--Conditions-->
+    <Target Name="Greet" Condition="'$(Greet)' != 'false' and '$(Person)' != ''">
+        <Message Text="$(Greeting)" Importance="high"/>
+    </Target>
 </Project>

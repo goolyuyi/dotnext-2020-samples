@@ -1,68 +1,24 @@
 <Project>
+    <PropertyGroup>
+        <AdditionalPeople>Maria;Andrew</AdditionalPeople>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <Person Include="Martin;Chrstina" />
-    <Person Include="John" />
-  </ItemGroup>
+    <ItemGroup>
+        <Person Include="Martin;Chrstina"/>
+        <Person Include="John"/>
 
-  <Target Name="Greet">
-    <Message Text="Hello @(Person)" Importance="high" />
-  </Target>
+        <Person Include="$(AdditionalPeople)"/>
+        <Person Remove="Martin"/>
+
+        <!--Items 可以 CRUD-->
+    </ItemGroup>
+
+    <Target Name="Greet">
+        <!--展开 Items-->
+        <Message Text="Hello @(Person)" Importance="high"/>
+        <!--Transform Items-->
+        <Message Text="Trans: @(Person->'Hello %(Identity)')" Importance="high"/>
+        <!--指定分隔符-->
+        <Message Text="Sep: @(Person->'Hello %(Identity)', '%0A')" Importance="high"/>
+    </Target>
 </Project>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
-  <PropertyGroup>
-    <AdditionalPeople>Maria;Andrew</AdditionalPeople>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <Person Include="$(AdditionalPeople)" />
-    <Person Remove="Martin" />
-  </ItemGroup>
--->
-
-
-
-
-
-
-
-
-
-<!--
-    <Message Text="@(Person->'Hello %(Identity)')" Importance="high" />
--->
-
-
-
-
-
-
-<!--
-    <Message Text="@(Person->'Hello %(Identity)', '%0A')" Importance="high" />
--->

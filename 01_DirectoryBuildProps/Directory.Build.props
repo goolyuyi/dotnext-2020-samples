@@ -1,7 +1,7 @@
 <Project>
   <PropertyGroup>
     <Version>1.2.3</Version>
-    <Authors>Martin Ullrich</Authors>
+    <Authors>yii</Authors>
     <Company>$(Authors)</Company>
     <TreatWarningsAsErrors Condition="'$(Configuration)' == 'Release'">True</TreatWarningsAsErrors>
   </PropertyGroup>

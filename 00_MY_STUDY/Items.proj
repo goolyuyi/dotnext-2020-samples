@@ -1,0 +1,28 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
+         ToolsVersion="4.0">
+
+    <ItemGroup>
+        <FirstItem Include="rhinoceros">
+            <Class>mammal</Class>
+            <Size>large</Size>
+        </FirstItem>
+        <FirstItem Include="tiger">
+            <Class>mammal</Class>
+            <Size>med</Size>
+        </FirstItem>
+
+    </ItemGroup>
+    <Target Name="MyTarget">
+        <ItemGroup>
+            <SecondItem Include="@(FirstItem)" KeepMetadata="Class"/>
+        </ItemGroup>
+
+        <Message Text="FirstItem: %(FirstItem.Identity)"/>
+        <Message Text="  Class: %(FirstItem.Class)"/>
+        <Message Text="  Size:  %(FirstItem.Size)"/>
+
+        <Message Text="SecondItem: %(SecondItem.Identity)"/>
+        <Message Text="  Class: %(SecondItem.Class)"/>
+        <Message Text="  Size:  %(SecondItem.Size)"/>
+    </Target>
+</Project>
