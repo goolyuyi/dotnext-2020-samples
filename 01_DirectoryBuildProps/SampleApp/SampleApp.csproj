@@ -6,10 +6,12 @@
         <Description>This is a sample application</Description>
     </PropertyGroup>
 
+    <!--build 前执行-->
     <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
         <Exec Command="echo $(ProjectDir);   echo $(TargetDir);"/>
     </Target>
-
+    
+    <!--build 后执行-->
     <Target Name="PostBuild" AfterTargets="PostBuildEvent">
         <Exec Command="echo Done!"/>
     </Target>

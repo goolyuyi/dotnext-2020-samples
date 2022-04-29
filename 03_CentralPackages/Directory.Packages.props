@@ -1,8 +1,9 @@
 <Project>
-  <PropertyGroup>
-    <ManagePackageVersionsCentrally>True</ManagePackageVersionsCentrally>
-  </PropertyGroup>
-  <ItemGroup>
-    <PackageVersion Include="Microsoft.EntityFrameworkCore" Version="3.1.8" />
-  </ItemGroup>
+    <PropertyGroup>
+        <ManagePackageVersionsCentrally>True</ManagePackageVersionsCentrally>
+    </PropertyGroup>
+    <ItemGroup>
+        <!--在这里统一管理版本-->
+        <PackageVersion Include="Microsoft.EntityFrameworkCore" Version="3.1.8"/>
+    </ItemGroup>
 </Project>

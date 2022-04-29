@@ -1,10 +1,12 @@
 <Project>
-  <PropertyGroup>
-    <Version>1.2.3</Version>
-    <Authors>yii</Authors>
-    <Company>$(Authors)</Company>
-    <TreatWarningsAsErrors Condition="'$(Configuration)' == 'Release'">True</TreatWarningsAsErrors>
-  </PropertyGroup>
-  <!-- All NuGet properties: https://docs.microsoft.com/en-us/dotnet/core/tools/csproj#nuget-metadata-properties -->
-  <!-- All properties by .NET SDKs: https://docs.microsoft.com/en-us/dotnet/core/project-sdk/overview -->
+    <PropertyGroup>
+        <Version>1.2.3</Version>
+        <Authors>yii</Authors>
+        <Company>$(Authors)</Company>
+        <TreatWarningsAsErrors Condition="'$(Configuration)' == 'Release'">True</TreatWarningsAsErrors>
+    </PropertyGroup>
+    <!--  Able to generate some building infos:https://docs.microsoft.com/en-us/dotnet/core/project-sdk/msbuild-props#generateassemblyinfo-->
+
+    <!-- All NuGet properties: https://docs.microsoft.com/en-us/dotnet/core/tools/csproj#nuget-metadata-properties -->
+    <!-- All properties by .NET SDKs: https://docs.microsoft.com/en-us/dotnet/core/project-sdk/overview -->
 </Project>
